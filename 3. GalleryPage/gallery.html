@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <section class="gallery">
+        <header>
+            <a href="#"><img src="./HomePicture/Logo.png" class="logo"></a> 
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="Navigation">
+                <li><a href="/1. HomePage/home.html">Home</a></li>
+                <li><a href="/2. ProductPage/product.html">Product</a></li>
+                <li><a href="/3. GalleryPage/gallery.html">Gallery</a></li>
+                <li><a href="/4. EventPage/event.html">Event</a></li>
+                <li><a href="/5. Register/register.html">Register</a></li>
+            </ul>           
+        </header>
+
+        <div class="Stores">
+            <div class="store">
+                <div class="box">
+                    <span class="Stores"> Pokemon </span>
+                    <img src="./HomePicture/Osaka.jpeg">
+                    <h3>Pokemon Stores</h3>
+                    <h3>At Osaka</h3>
+                </div>
+            </div>
+            
+            <div class="store">
+                <div class="box">
+                    <span class="Stores"> Kirby </span>
+                    <img src="./HomePicture/Japan.jpg">
+                    <h3>Kirby Stores</h3>
+                    <h3>At Tokyo</h3>
+                </div>
+            </div>
+            
+            <div class="store">
+                <div class="box">
+                    <span class="Stores"> Mario </span>
+                    <img src="./HomePicture/Tokyo.jpeg">
+                    <h3>Mario Stores</h3>
+                    <h3>At Koshigaya</h3>
+                </div>
+            </div>
+
+            <div class="store">
+                <div class="buy">
+                    <span class="Stores"> Customer 1 </span>
+                    <img src="./HomePicture/BuyMario.jpeg">
+                    <h3>John Doe</h3>
+                    <h3>The young child's eyes sparkled with joy as they clutched their newly acquired Mario Kart game. They couldn't contain their excitement, eagerly flipping through the vibrant instruction manual and admiring the colorful artwork on the game's cover.
+
+                        With every page turned, the child's imagination ignited, envisioning themselves racing through thrilling tracks, navigating sharp turns, and launching colorful items at their opponents. The game promised an exhilarating experience filled with adrenaline-pumping races and the chance to compete against friends or computer-controlled characters.</h3>
+                </div>
+            </div>
+
+            <div class="store">
+                <div class="buy">
+                    <span class="Stores"> Customer 2 </span>
+                    <img src="./HomePicture/BuyPikachu.jpeg">
+                    <h3>Jovanka Charissa</h3>
+                    <h3>
+                        The Pokémon trainer, accompanied by their loyal partner Pikachu, exuded a sense of adventure and determination. Dressed in a stylish and practical outfit suitable for exploration, the trainer stood tall with a backpack slung over their shoulders and a confident smile on their face.
+                        
+                        Pikachu, perched comfortably on the trainer's shoulder, emitted an aura of electrifying energy. With its bright, expressive eyes and rosy cheeks, Pikachu radiated a mix of playfulness and unwavering loyalty. Its golden fur was soft to the touch, and a bolt-shaped tail peeked out from behind, symbolizing its electric prowess.</h3>
+                </div>
+            </div>
+
+        </div>
+            
+        <ul class="socialmedia">
+            <li><a href="https://www.instagram.com/antonycornelis/"><img src="./SocialMedia/instagram.png"></a></li>
+            <li><a href="https://web.facebook.com/antony.cornelis?_rdc=1&_rdr"><img src="./SocialMedia/facebook.png"></a></li>
+            <li><a href="https://www.youtube.com/@antonylaurencecornelis4381"><img src="./SocialMedia/youtube.png"></a></li>
+        </ul>
+
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination:{
+                el: '.swiper-pagination',
+            },
+            loop: true,
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const Navigation = document.querySelector('.Navigation')
+            menuToggle.classList.toggle('active')
+            Navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
