@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #181616;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    padding: 67px 50px;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header .logo{
+    position: relative;
+    max-width: 200px;
+}
+
+header .Navigation{
+    position: relative;
+    display: flex;
+}
+
+header .Navigation li{
+    list-style: none;
+}
+
+header .Navigation li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+section .boxmario .logoimg{
+    margin-top: 200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .boxmario .content{
+    display: flex;
+    color: #fff;
+    width: 95vw;
+}
+
+section .boxmario .MarioPage{
+    color: red;
+}
+
+section .boxmario .LuigiPage{
+    color: green;
+}
+
+section .boxpokemon .logoimg{
+    margin-top: 200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .boxpokemon .content{
+    display: flex;
+    color: #fff;
+    width: 89vw;
+}
+
+section .boxpokemon .PikachuPage{
+    color: yellow;
+}
+
+section .boxpokemon .GreninjaPage{
+    color: rgb(71, 71, 238);
+}
+
+section .boxkirby .logoimg{
+    margin-top: 200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .boxkirby .content{
+    display: flex;
+    color: #fff;
+    width: 89vw;
+}
+
+section .boxkirby .KirbyPage{
+    color: pink;
+}
+
+section .boxkirby .MetaKnightPage{
+    color: rgb(43, 43, 226);
+}
+
+section .boxzelda .logoimg{
+    margin-top: 200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .boxzelda .content{
+    display: flex;
+    color: #fff;
+    width: 89vw;
+}
+
+section .boxzelda .LinkPage{
+    color: green;
+}
+
+section .boxzelda .ZeldaPage{
+    color: purple
+}
+
+section .content img{
+    transition: 0.2s ease-in-out;
+}
+
+section .content img:hover{
+    transform: translateY(-50px);
+}
+
+.socialmedia{
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+    margin-left: 10vh;
+}
+
+.socialmedia li{
+    list-style: none;
+}
+
+.socialmedia li a{
+    display: inline-block;
+    margin-left: 15px;
+    background: #222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.socialmedia a:hover{
+    background: #0c1ae7;
+    transform: translateY(-10px);
+}
+
+.socialmedia li a img{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+@media(max-width: 768px){
+    header{
+        padding: 30px;
+    }
+    header .logo{
+        margin-top: -40px;
+        margin-left: -50px;
+    }
+    section{
+        max-width: 100%;
+    }
+    header .Navigation{
+        display: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .box-container{
+        margin-top: -100px;
+    }
+    .box-container .boxmario .content img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .box-container .boxpokemon .content img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .box-container .boxkirby .content img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .box-container .boxzelda .content img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .box-container p{
+        font-size: x-small;
+    }
+    .box-container .boxzelda .logoimg .image{
+        max-width: 300px;
+    }
+    header .Navigation.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0c1ae7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    header .Navigation li a {
+        display: inline-block;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        margin-left: 0;
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 300;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./HamburgerMenu/menuwhite.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 10000;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .toggle.active{
+        position: fixed;
+        right: 40px;
+        background: url(./HamburgerMenu/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}
