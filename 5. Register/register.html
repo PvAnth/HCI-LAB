@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  
+  <body>
+    <header>
+      <a href="#"><img src="./HomePicture/Logo.png" class="logo"></a> 
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="Navigation">
+          <li><a href="/1. HomePage/home.html">Home</a></li>
+          <li><a href="/2. ProductPage/product.html">Product</a></li>
+          <li><a href="/3. GalleryPage/gallery.html">Gallery</a></li>
+          <li><a href="/4. EventPage/event.html">Event</a></li>
+          <li><a href="/5. Register/register.html">Register</a></li>
+      </ul>           
+  </header>
+  
+    <form action=""> 
+      <h2>Membership Registration</h2>
+      <div class="form-group username">
+        <label for="username">Full Name</label>
+        <input type="text" id="username" placeholder="Enter your full name">
+      </div>
+      <div class="form-group email">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" placeholder="Enter your email address">
+      </div>
+      <div class="form-group password">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <i id="pass-toggle-btn" class="fa-solid fa-eye"></i>
+      </div>
+      <div class="form-group date">
+        <label for="date">Birth Date</label>
+        <input type="date" id="date" placeholder="Select your date">
+      </div>
+      <div class="form-groupagreement">
+        <div class="checkbox">
+          <input type="checkbox" class="name">
+        </div>
+        <label for="checkbox">I Agree To Every Terms And Conditions</label>
+      </div>
+      <div class="form-group submit-btn">
+        <input type="submit" value="Join Memberhsip" id="submits">
+      </div>
+    </form>
+    <h1 class="error"></h1>
+    
+    <script src="logic.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination:{
+                el: '.swiper-pagination',
+            },
+            loop: true,
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const Navigation = document.querySelector('.Navigation')
+            menuToggle.classList.toggle('active')
+            Navigation.classList.toggle('active')
+        }
+    </script>
+  </body>
+</html>
