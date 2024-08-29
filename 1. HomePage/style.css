@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161616;
+}
+
+section .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0c1ae7;
+    clip-path: circle(70% at right -20%);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    max-width: 200px;
+}
+
+header .Navigation{
+    position: relative;
+    display: flex;
+}
+
+header .Navigation li{
+    list-style: none;
+}
+
+header .Navigation li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.description{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description .text{
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.description .text h2{
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+
+.description .text p{
+    color: #fff;
+}
+
+.description .text a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #0c1ae7;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.socialmedia{
+    position: absolute;
+    bottom: 60px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialmedia li{
+    list-style: none;
+}
+
+.socialmedia li a{
+    display: inline-block;
+    margin-left: 15px;
+    background: #222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.socialmedia a:hover{
+    background: #0c1ae7;
+    transform: translateY(-10px);
+}
+
+.socialmedia li a img{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+.swiper-container{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.description .imgBox{
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.description .imgBox img{
+    max-width: 1000px;
+}
+
+.swiper-slide img{
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right{
+    background-image: none;
+}
+
+.BestSeller{
+    display: flex;
+    top: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+@media(max-width: 768px){
+    header{
+        padding: 30px;
+    }
+    header .logo{
+        max-width: 150px;
+    }
+    section{
+        padding: 50px 50px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    section .description .text{
+        top: 10px;
+    }
+    section .description .imgBox img{
+        top: 10px;
+    }
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .socialmedia{
+        left: 0;
+        bottom: 0;
+    }
+    .description{
+        flex-direction: column;
+    }
+    .description .text{
+        font-size: small;
+        padding-top: 40px;
+    }
+    .swiper-slide{
+        height: 300px;
+    }
+    header .Navigation{
+        display: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    header .Navigation.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0c1ae7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    header .Navigation li a {
+        display: inline-block;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        margin-left: 0;
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 300;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./HamburgerMenu/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 10000;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .toggle.active{
+        position: fixed;
+        right: 40px;
+        background: url(./HamburgerMenu/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}
