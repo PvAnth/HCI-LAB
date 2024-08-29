@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Product</title>
+</head>
+<body>
+    <section class="product">
+        <header>
+            <a href="#"><img src="./HomePicture/Logo.png" class="logo"></a> 
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="Navigation">
+                <li><a href="/1. HomePage/home.html">Home</a></li>
+                <li><a href="/2. ProductPage/product.html">Product</a></li>
+                <li><a href="/3. GalleryPage/gallery.html">Gallery</a></li>
+                <li><a href="/4. EventPage/event.html">Event</a></li>
+                <li><a href="/5. Register/register.html">Register</a></li>
+            </ul>           
+        </header>
+
+        
+        <div class="box-container">
+            
+            <div class="boxmario">
+                <p>EVENT ONLY FOR TODAY CHECK OUT FOR 50% PRIZE</p>
+                <div class="content">
+                    <img src="./HomePicture/pacman-removebg-preview.png">
+                    <img src="./HomePicture/incineroar-removebg-preview.png">
+                    <img src="./HomePicture/megaman-removebg-preview.png">
+                </div>
+            </div>
+
+        </div>
+
+        <ul class="socialmedia">
+            <li><a href="https://www.instagram.com/antonycornelis/"><img src="./SocialMedia/instagram.png"></a></li>
+            <li><a href="https://web.facebook.com/antony.cornelis?_rdc=1&_rdr"><img src="./SocialMedia/facebook.png"></a></li>
+            <li><a href="https://www.youtube.com/@antonylaurencecornelis4381"><img src="./SocialMedia/youtube.png"></a></li>
+        </ul>
+        
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination:{
+                el: '.swiper-pagination',
+            },
+            loop: true,
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const Navigation = document.querySelector('.Navigation')
+            menuToggle.classList.toggle('active')
+            Navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
